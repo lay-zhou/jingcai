@@ -1,0 +1,28 @@
+{
+  "name": "cai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chart.js": "^2.7.3",
+    "echarts": "^4.2.0-rc.2",
+    "mint-ui": "^2.2.13",
+    "vue": "^2.5.17",
+    "vue-chartjs": "^3.4.0",
+    "vue-router": "^3.0.1",
+    "vue-scroller": "^2.2.4",
+    "vuex": "^3.0.1",
+    "webpack": "^4.26.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

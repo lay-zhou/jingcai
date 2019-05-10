@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html class="no-focus" lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>LogPay Demo</title>
+<meta name="author" content="NestCloud">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="./static/css/bootstrap.css">
+<link rel="stylesheet" id="css-main" href="./static/css/oneui.css">
+</head>
+<body>
+<div class="content overflow-hidden">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+			<div class="block block-themed animated fadeIn">
+				<div class="block-header bg-primary">
+					<h3 class="block-title">模拟LogPay支付</h3>
+				</div>
+				<div class="block-content block-content-full block-content-narrow">
+				<form action="pay.php" method="get">
+					<div class="js-validation-login form-horizontal push-30-t push-50">
+                        <div class="input-group input-group-xs">
+							<div class="input-group-addon">订单金额</div>
+								<input class="js-icon-search form-control" type="text" id="price" name="price" value="0.1">
+						</div><br>
+							<div class="input-group input-group-xs">
+								<div class="input-group-addon">支付通道</div>
+									<select class="form-control" name="payType" size="1">
+				                      <option value="alipay">支付宝个码通道</option>
+									  <option value="wxpay">微信个码通道</option>
+									</select>
+						</div><br>						
+                        <div class="input-group input-group-xs">
+							<div class="input-group-addon">订单用户</div>
+								<input class="js-icon-search form-control" type="text" id="orderUid" name="orderUid" value="188888@qq.com">
+						</div><br>  
+                        <div class="input-group input-group-xs">
+							<div class="input-group-addon">订单名称</div>
+								<input class="js-icon-search form-control" type="text" id="orderName" name="orderName" value="DEMO测试">
+						</div><br>  
+						<div class="form-group">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<button class="btn btn-block btn-primary" type="submit">提交订单</button>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+			<div class="block block-themed animated fadeIn">
+				<div class="block-header bg-primary">
+					<h3 class="block-title">订单查询</h3>
+				</div>
+				<div class="block-content block-content-full block-content-narrow">
+				<form action="http://logpay.paywz.cn/server/api/query" method="post">
+					<div class="js-validation-login form-horizontal push-30-t push-50">
+						<div class="input-group input-group-xs">
+							<div class="input-group-addon">查询商户号</div>
+								<input class="js-icon-search form-control" type="text" name="uid" id="uid">
+						</div><br>
+                        <div class="input-group input-group-xs">
+							<div class="input-group-addon">查询订单号</div>
+								<input class="js-icon-search form-control" type="text" id="orderNumber" name="orderNumber">
+						</div><br>
+						<div class="input-group input-group-xs">
+						<div class="form-group">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<button class="btn btn-block btn-primary" type="submit">查询订单</button>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="push-10-t text-center animated fadeInUp">
+	<small class="text-muted font-w600">© LogPay Demo<br><br><br></small>
+</div>
+<script src="./static/js/jquery.min.js"></script>
+<script>
+</script>
+</body>
+</html>
